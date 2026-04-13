@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tania Builders</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  background: url('hero.jpg') center/cover no-repeat;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  background-color: rgba(0,0,0,0.5);
+  background-blend-mode: darken;
+}
+
+.hero h1 {
+  font-size: 45px;
+}
+
+/* BUTTON */
+.btn {
+  padding: 12px 20px;
+  background: orange;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+/* SECTION */
+.section {
+  padding: 40px;
+  text-align: center;
+}
+
+/* PRODUCTS */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  width: 250px;
+  border: 1px solid #ddd;
+  padding: 15px;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* LANGUAGE BUTTON */
+.lang {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: green;
+  color: white;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<!-- LANGUAGE SWITCH -->
+<div class="lang">
+  <button onclick="setLang('en')">English</button>
+  <button onclick="setLang('bn')">বাংলা</button>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <h1 id="title">Reliable Construction Services</h1>
+    <p id="subtitle">30 Years Experience | Govt Contractor</p>
+    <a href="#contact" class="btn" id="btn">Contact Now</a>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="section">
+  <h2 id="aboutTitle">About Us</h2>
+  <p id="aboutText">
+    We are a trusted contractor and material supplier in Kolkata with 30 years experience.
+  </p>
+</div>
+
+<!-- PRODUCTS -->
+<div class="section">
+  <h2 id="productTitle">Materials & Price</h2>
+
+  <div class="products">
+    <div class="card">
+      <img src="sand.jpg">
+      <h3 id="sand">Sand</h3>
+      <p>₹1200 / ton</p>
+    </div>
+
+    <div class="card">
+      <img src="cement.jpg">
+      <h3 id="cement">Cement</h3>
+      <p>₹380 / bag</p>
+    </div>
+
+    <div class="card">
+      <img src="stone.jpg">
+      <h3 id="stone">Stone Chips</h3>
+      <p>₹900 / ton</p>
+    </div>
+
+    <div class="card">
+      <img src="dust.jpg">
+      <h3 id="dust">Dust</h3>
+      <p>₹700 / ton</p>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<div class="section">
+  <h2 id="serviceTitle">Services</h2>
+  <p id="services">
+    Govt Contract Work, House Construction, Material Supply
+  </p>
+</div>
+
+<!-- CONTACT -->
+<div class="section" id="contact">
+  <h2 id="contactTitle">Contact</h2>
+  <p id="contactText">
+    Address: Memanpur SK Para Kolkata
+  </p>
+</div>
+
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/91XXXXXXXXXX">💬</a>
+
+<script>
+function setLang(lang) {
+  if(lang === 'bn') {
+    document.getElementById('title').innerText = "বিশ্বাসযোগ্য নির্মাণ পরিষেবা";
+    document.getElementById('subtitle').innerText = "৩০ বছরের অভিজ্ঞতা | সরকারি ঠিকাদার";
+    document.getElementById('btn').innerText = "যোগাযোগ করুন";
+    document.getElementById('aboutTitle').innerText = "আমাদের সম্পর্কে";
+    document.getElementById('aboutText').innerText = "আমরা কলকাতার একটি বিশ্বস্ত ঠিকাদার এবং নির্মাণ সামগ্রী সরবরাহকারী।";
+    document.getElementById('productTitle').innerText = "নির্মাণ সামগ্রী ও মূল্য";
+    document.getElementById('serviceTitle').innerText = "পরিষেবা";
+    document.getElementById('services').innerText = "সরকারি কাজ, বাড়ি নির্মাণ, সামগ্রী সরবরাহ";
+    document.getElementById('contactTitle').innerText = "যোগাযোগ";
+    document.getElementById('contactText').innerText = "ঠিকানা: মেমনপুর, এস কে পাড়া, কলকাতা";
+  } else {
+    location.reload();
+  }
+}
+</script>
+
+</body>
+</html>
